@@ -22,8 +22,7 @@ portfolio/
 ├── styles.css          # CSS styling with dark/light mode support
 ├── script.js           # JavaScript for interactivity and theme toggle
 ├── 1000217198.jpg      # Professional headshot
-├── README.md           # This file
-└── DEPLOYMENT.md        # Deployment instructions
+└── README.md           # This file
 ```
 
 ## 🚀 Quick Start
@@ -65,12 +64,6 @@ Updated technical skills with proper icons:
 5. **Choose branch**: main/master
 6. **Save** and wait for deployment
 7. **Access your site** at `https://yourusername.github.io/repository-name`
-
-### Netlify
-
-1. **Drag and drop** your project folder to [Netlify](https://netlify.com)
-2. **Or connect** your GitHub repository
-3. **Deploy** automatically with custom domain support
 
 ### Vercel
 
