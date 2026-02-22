@@ -22,14 +22,16 @@ const defaultData = {
 			title: 'Venus and Napping - VAPT',
 			description: 'Black-box penetration test and vulnerability assessment on two VulnHub servers.',
 			tags: ['Security','VAPT','Linux'],
-			url: 'https://github.com/Thotipaccy/venus-napping-vapt'
+			url: 'https://github.com/Thotipaccy/venus-napping-vapt',
+			image: ''
 		},
 		{
 			id: 'p2',
 			title: 'Student Performance Analytics',
 			description: 'ML pipeline and Power BI dashboard for student performance insights.',
 			tags: ['Python','ML','Power BI'],
-			url: 'https://github.com/Thotipaccy/StudentPerformanceAnalytics'
+			url: 'https://github.com/Thotipaccy/StudentPerformanceAnalytics',
+			image: ''
 		}
 	],
 	sections: {

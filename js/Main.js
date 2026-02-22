@@ -52,13 +52,16 @@ document.addEventListener('DOMContentLoaded', ()=>{
 			const card = document.createElement('div');
 			card.className = 'project-card card mb-3';
 			card.innerHTML = `
-				<div class="card-body">
-					<h5 class="card-title">${p.title}</h5>
-					<p class="card-text">${p.description}</p>
-					<div class="mb-2">
-						${ (p.tags||[]).map(t=>`<span class="badge bg-secondary me-1">${t}</span>`).join('') }
+				<div class="card-body d-flex gap-3">
+					${ p.image ? `<div style="width:140px; flex-shrink:0"><img src="${p.image}" alt="project" style="width:100%; height:100%; object-fit:cover; border-radius:6px;"/></div>` : '' }
+					<div style="flex:1">
+						<h5 class="card-title">${p.title}</h5>
+						<p class="card-text">${p.description}</p>
+						<div class="mb-2">
+							${ (p.tags||[]).map(t=>`<span class="badge bg-secondary me-1">${t}</span>`).join('') }
+						</div>
+						${ p.url ? `<a href="${p.url}" target="_blank" class="btn btn-sm btn-outline-primary">View on GitHub</a>`: '' }
 					</div>
-					${ p.url ? `<a href="${p.url}" target="_blank" class="btn btn-sm btn-outline-primary">View on GitHub</a>`: '' }
 				</div>
 			`;
 			projectsGrid.appendChild(card);
