@@ -32,6 +32,14 @@ const defaultData = {
 			url: 'https://github.com/Thotipaccy/StudentPerformanceAnalytics'
 		}
 	],
+	sections: {
+		about: true,
+		skills: true,
+		projects: true,
+		experience: true,
+		contact: true,
+		testimonials: true
+	},
 	experience: [
 		{ year: '2023 - Present', role: "Bachelor's Degree in Software Engineering" },
 		{ year: '2016 - 2022', role: "A'Level & O'Level - Petit Seminaire Saint Kizito de Zaza" }

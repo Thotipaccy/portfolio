@@ -1,0 +1,5 @@
+body{font-family: Poppins, system-ui, -apple-system, 'Segoe UI', Roboto, Arial}
+.card{border-radius:10px}
+#json-editor{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Courier New', monospace}
+.form-check-label{text-transform:capitalize}
+

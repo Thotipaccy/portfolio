@@ -27,6 +27,26 @@ document.addEventListener('DOMContentLoaded', ()=>{
 	function loadToEditor(){
 		const data = PortfolioData.get();
 		jsonEditor.value = JSON.stringify(data, null, 2);
+		// preview image
+		const imgPreview = document.getElementById('profile-image-preview');
+		if(imgPreview){
+			imgPreview.src = data.profile && data.profile.image ? data.profile.image : '';
+		}
+		// section toggles
+		const toggles = document.getElementById('section-toggles');
+		if(toggles && data.sections){
+			toggles.innerHTML = '';
+			Object.keys(data.sections).forEach(k=>{
+				const id = 'toggle-' + k;
+				const div = document.createElement('div');
+				div.className = 'form-check form-switch';
+				div.innerHTML = `<input class="form-check-input" type="checkbox" id="${id}" ${data.sections[k]? 'checked': ''}><label class="form-check-label" for="${id}">${k}</label>`;
+				toggles.appendChild(div);
+				document.getElementById(id).addEventListener('change', (e)=>{
+					const d = PortfolioData.get(); d.sections[k] = e.target.checked; PortfolioData.set(d);
+				});
+			});
+		}
 	}
 
 	function saveFromEditor(){
@@ -58,6 +78,27 @@ document.addEventListener('DOMContentLoaded', ()=>{
 		jsonEditor.value = JSON.stringify(d, null, 2);
 		alert('Reset to defaults');
 	});
+
+	// profile image upload handling
+	const profileImageInput = document.getElementById('profile-image-input');
+	if(profileImageInput){
+		profileImageInput.addEventListener('change', (ev)=>{
+			const f = ev.target.files && ev.target.files[0];
+			if(!f) return;
+			const reader = new FileReader();
+			reader.onload = function(e){
+				const dataUrl = e.target.result;
+				const d = PortfolioData.get();
+				d.profile = d.profile || {};
+				d.profile.image = dataUrl;
+				PortfolioData.set(d);
+				const imgPreview = document.getElementById('profile-image-preview');
+				if(imgPreview) imgPreview.src = dataUrl;
+				alert('Profile image saved to localStorage (data URL)');
+			};
+			reader.readAsDataURL(f);
+		});
+	}
 
 	btnApply.addEventListener('click', ()=>{
 		saveFromEditor();

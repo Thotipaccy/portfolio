@@ -32,6 +32,18 @@ document.addEventListener('DOMContentLoaded', ()=>{
 		skillsGrid.appendChild(container);
 	}
 
+	// Hide sections according to settings
+	const sections = data.sections || {};
+	if(sections.about === false){
+		const aboutSection = document.getElementById('about'); if(aboutSection) aboutSection.style.display = 'none';
+	}
+	if(sections.skills === false){
+		const skillsSection = document.getElementById('skills'); if(skillsSection) skillsSection.style.display = 'none';
+	}
+	if(sections.projects === false){
+		const projectsSection = document.getElementById('projects'); if(projectsSection) projectsSection.style.display = 'none';
+	}
+
 	// Projects
 	const projectsGrid = document.getElementById('projects-grid');
 	if(projectsGrid && Array.isArray(data.projects)){

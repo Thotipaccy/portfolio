@@ -32,10 +32,24 @@
         </div>
       </div>
 
-      <div id="editor" class="d-none">
+        <div id="editor" class="d-none">
+        <div class="mb-3 row">
+          <div class="col-md-6">
+            <label class="form-label">Profile Image</label>
+            <input id="profile-image-input" type="file" accept="image/*" class="form-control">
+            <img id="profile-image-preview" src="" alt="preview" class="img-fluid mt-2" style="max-height:160px;">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Section Visibility</label>
+            <div id="section-toggles" class="d-flex flex-column gap-1">
+              <!-- toggles inserted by admin.js -->
+            </div>
+          </div>
+        </div>
+
         <div class="mb-3">
           <label class="form-label">Portfolio JSON</label>
-          <textarea id="json-editor" class="form-control" rows="16" spellcheck="false"></textarea>
+          <textarea id="json-editor" class="form-control" rows="12" spellcheck="false"></textarea>
         </div>
         <div class="mb-3 d-flex gap-2">
           <button id="btn-load" class="btn btn-secondary">Reload</button>
@@ -44,7 +58,7 @@
           <button id="btn-apply" class="btn btn-primary">Apply & Preview</button>
         </div>
         <div>
-          <small class="text-muted">Editing JSON lets you change all data stored in localStorage. Preview opens the public page.</small>
+          <small class="text-muted">Editing JSON or uploading an image updates localStorage. Preview opens the public page.</small>
         </div>
       </div>
     </div>

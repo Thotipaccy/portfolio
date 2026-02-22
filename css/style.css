@@ -1,0 +1,17 @@
+(/* Basic layout improvements using Bootstrap utilities plus a few custom rules */)
+body{font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;line-height:1.5;color:#222}
+.hero{padding:3rem 0;background:linear-gradient(180deg,#ffffff 0%,#f8f9fa 100%)}
+.hero-title{font-size:1.75rem;font-weight:700}
+.highlight{color:#0d6efd}
+.profile-img{max-width:220px;border-radius:12px;border:4px solid rgba(13,110,253,0.08)}
+.skills-grid h3{margin-bottom:0.75rem}
+.skill-item{background:#fff}
+.project-card .card-body{background:linear-gradient(180deg,#fff,#fbfbff)}
+.contact-form .form-control{border-radius:8px}
+.navbar{box-shadow:0 2px 8px rgba(0,0,0,0.04)}
+.footer{padding:2rem 0;background:#f8f9fa}
+
+@media(min-width:768px){
+	.hero-title{font-size:2.25rem}
+}
+
