@@ -1,4 +1,4 @@
-(/* Basic layout improvements using Bootstrap utilities plus a few custom rules */)
+/* Basic layout improvements using Bootstrap utilities plus a few custom rules */
 body{font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;line-height:1.5;color:#222}
 .hero{padding:3rem 0;background:linear-gradient(180deg,#ffffff 0%,#f8f9fa 100%)}
 .hero-title{font-size:1.75rem;font-weight:700}
@@ -12,6 +12,5 @@ body{font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helv
 .footer{padding:2rem 0;background:#f8f9fa}
 
 @media(min-width:768px){
-	.hero-title{font-size:2.25rem}
+  .hero-title{font-size:2.25rem}
 }
-
